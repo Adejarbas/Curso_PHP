@@ -1,0 +1,261 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0; /* passa o padding para 0 */
+  margin: 0; /* passa o margin para 0 */
+  box-sizing: border-box; /* aplica o box-sizing para todos os elementos */
+}
+
+html {
+    min-height: 100vh; /* define a altura mínima do html para 100% da altura da viewport */
+    position: relative; /* define a posição do html como relativa */
+}
+
+main {
+    margin-bottom: 250px; /* define a margem inferior do main para 250px */
+}
+
+ /* HOME */
+
+ #title-container {
+    min-width: 500px; /* define a largura mínima do container do título */
+    text-align: center; /* centraliza o texto do container do título */
+    margin-top: 30px;
+ }
+
+ #title-container h1 {
+    font-size: 50px; /* define o tamanho da fonte do título */
+ }
+ 
+ #title-container p {
+    font-size: 10px; /* define o tamanho da fonte do parágrafo */
+    color: #999; /* define a cor do texto do parágrafo */
+    text-transform: uppercase;
+ }
+
+ #posts-container {
+    max-width: 1200px; /* define a largura máxima do container de posts */
+    margin: 0 auto; /* centraliza o container de posts */
+    margin-top: 30px; /* define a margem superior do container de posts */
+    display: flex; /* define o display do container de posts como flex */
+    flex-wrap: wrap; /* permite que os itens do container de posts se ajustem em várias linhas */
+ }
+
+ .post-box:first-child {
+    min-width: 100%; /* define a largura mínima do primeiro post como 100% */
+ }
+
+ .post-box {
+    flex: 1 1 0; /* define o flex do post como 1, permitindo que ele cresça e encolha */
+
+    margin-bottom: 20px; /* define a margem inferior dos posts */
+ }
+
+ .post-box:nth-child(3) {
+    margin: 0 1%; /* define a margem dos posts */
+ }
+
+ .post-box img {
+    width: 100%; /* define a largura da imagem do post como 100% */
+ } 
+
+ .post-box .post-title {
+    font-size: 24px; /* define o tamanho da fonte do título do post */
+    margin: 10px 0; /* define a margem do título do post */
+ }
+
+ .post-box .post-title a {
+    color: #000; /* define a cor do link do título do post */
+ }
+
+ .post-box .post-title a:hover {
+    color: #999; /* define a cor do link do título do post ao passar o mouse */
+ }
+
+ .post-box .post-description {
+    color: #666;
+ }
+
+ .tags-container {
+    margin-top: 10px; /* define a margem superior do container de tags */
+ }
+
+ .tags-container a {
+    font-size: 14px; /* define o tamanho da fonte das tags */
+    color: #333; /* define a cor do texto das tags */
+    display: inline-block; /* define o display das tags como inline-block */
+    margin-right: 5px; /* define a margem direita das tags */
+ }
+
+ /* NAVBAR */
+
+ #logo {
+    position: absolute;
+    top: 10px; /* define a posição do logo no topo da navbar */
+    left: 9.5%; /* define a posição do logo à esquerda da navbar */
+}
+
+#logo img  {
+    width: 50px; /* define a largura do logo */
+}
+
+#navbar {
+    display: flex; /* define o display do navbar como flex */
+    align-items: center; /* alinha os itens do navbar no centro */
+    justify-content: center; /* justifica os itens do navbar no centro */
+    background-color: #161616; /* define a cor de fundo do navbar */
+    padding: 20px; /* define o padding do navbar */
+    text-transform: uppercase; /* transforma o texto do navbar em maiúsculas */
+    list-style: none; /* remove a lista de estilo do navbar */
+}
+
+#navbar li {
+    margin: 0 10px; /* define a margem dos itens do navbar */
+    padding: 5px; /* define o padding dos itens do navbar */
+}
+
+#navbar .nav-link {
+    color: #FFF;
+    text-decoration: none; /* remove o sublinhado dos links do navbar */
+    transition: .5s; /* define a transição dos links do navbar */
+    font-size: 14px; /* define o tamanho da fonte dos links do navbar */
+}
+
+#navbar .nav-link:hover {
+    color: #999; /* define a cor dos links do navbar ao passar o mouse */
+}
+
+/* POST PAGE */
+
+#post-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "main sidebar";
+  grid-gap: 10px;
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 250px;
+}
+
+.content-container {
+  grid-area: main;
+}
+
+#main-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#post-description {
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.post-content {
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+.img-container {
+  margin-bottom: 30px;
+}
+
+.img-container img {
+  width: 60%;
+}
+
+/* POST ASIDE */
+
+/* POST ASIDE */
+.nav-container {
+  grid-area: sidebar;
+}
+
+#tags-title, #categories-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-color: #000;
+  color: #FFF;
+  text-align: center;
+  padding: 10px;
+  font-weight: 300;
+}
+
+#tag-list, #categories-list {
+  list-style: none;
+}
+
+#tag-list li, #categories-list li {
+  margin-bottom: 10px;
+}
+
+#tag-list a, #categories-list a {
+  color: #666;
+  transition: .5s;
+}
+
+#tag-list a:hover, #categories-list a:hover {
+  color: #000;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%; /* define a largura do footer para 100% */
+    position: absolute; /* define a posição do footer como absoluta */
+    bottom: 0; /* define a posição do footer no fundo da página */
+    background-color: #161616; /* define a cor de fundo do footer */
+    color: #FFF; /* define a cor do texto do footer */
+    padding: 50px 0; /* define o padding do footer */
+    text-align: center; /* centraliza o texto do footer */
+}
+
+/* MOBILE */
+@media(max-width: 480px) {
+
+  /* HOME */
+  header {
+    width: 100%;
+  }
+
+  #logo {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    width: 50px;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #title-container {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+
+  #posts-container {
+    margin-top: 20px;
+  }
+
+  .post-box {
+    flex: 100% 1 0;
+    padding: 15px;
+    margin: 0;
+  }
+
+  /* POST */
+  #post-container {
+    grid-template-columns: 100%;
+    padding: 15px;
+    grid-template-areas: "main"
+    "sidebar";
+  }
+
+  .img-container img {
+    width: 100%;
+  }
+
+}
