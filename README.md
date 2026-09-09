@@ -30,6 +30,13 @@ Este repositório foi criado como parte de um curso que estou fazendo para me ap
 - **variaveis/**: Exemplos de uso de variáveis.
 
 
+## Banco de Dados
+
+A estrutura das tabelas usadas nos projetos (moviestar e agenda) esta
+documentada em [BANCO_DE_DADOS.md](BANCO_DE_DADOS.md), com os scripts SQL
+para recriar tudo do zero.
+
+
 ## Requisitos
 - PHP 7.4 ou superior
 - Servidor local (XAMPP, WAMP, Laragon, etc)
